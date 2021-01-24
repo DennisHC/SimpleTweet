@@ -28,4 +28,15 @@
         android:layout_marginTop="5dp"
         android:layout_marginEnd="5dp"
         android:text="@string/tweet" />
+
+    <TextView
+        android:id="@+id/tvCharsRemaining"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etCompose"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="5dp"
+        android:layout_toStartOf="@+id/btnTweet"
+        android:text="140" />
+
 </RelativeLayout>

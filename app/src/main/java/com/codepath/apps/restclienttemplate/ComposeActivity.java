@@ -4,11 +4,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Parcelable;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.codepath.apps.restclienttemplate.models.Tweet;
@@ -26,6 +28,10 @@ public class ComposeActivity extends AppCompatActivity {
 
     EditText etCompose;
     Button btnTweet;
+    TextView tvCharsRemaining;
+
+    int length;
+    int charsRemaining;
 
     // Reference to Twitter Client
     TwitterClient client;
@@ -41,6 +47,30 @@ public class ComposeActivity extends AppCompatActivity {
 
         etCompose = findViewById(R.id.etCompose);
         btnTweet = findViewById(R.id.btnTweet);
+        tvCharsRemaining = findViewById(R.id.tvCharsRemaining);
+
+        etCompose.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                // Fires right as the text is being changed (even supplies the range of text)
+                length = etCompose.getText().length();
+                // Toast.makeText(ComposeActivity.this, String.valueOf(length), Toast.LENGTH_SHORT).show();
+                charsRemaining = MAX_TWEET_LENGTH - length;
+                tvCharsRemaining.setText(String.valueOf(charsRemaining));
+            }
+
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count,
+                                          int after) {
+                // Fires right before text is changing
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                // Fires right after the text has changed
+                // tvDisplay.setText(s.toString());
+            }
+        });
 
         // Set click listener on button
         btnTweet.setOnClickListener(new View.OnClickListener() {
