@@ -1,5 +1,7 @@
 package com.codepath.apps.restclienttemplate.models;
 
+import com.codepath.apps.restclienttemplate.TimeFormatter;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -29,4 +31,10 @@ public class Tweet {
         }
         return tweets;
     }
+
+    public static String getFormattedTimestamp(Tweet tweet)
+    {
+        return TimeFormatter.getTimeDifference(tweet.createdAt);
+    }
+
 }
