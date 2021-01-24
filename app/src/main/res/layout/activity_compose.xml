@@ -37,6 +37,6 @@
         android:layout_marginTop="18dp"
         android:layout_marginEnd="5dp"
         android:layout_toStartOf="@+id/btnTweet"
-        android:text="140" />
+        android:hint="280" />
 
 </RelativeLayout>
