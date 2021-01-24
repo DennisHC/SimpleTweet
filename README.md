@@ -33,13 +33,14 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='simple_tweet_demo' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='simpletweet_demo.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
 Describe any challenges encountered while building the app.
+Needed to subscribe to many Twitter accounts to be able to display the refresh on pull down was working properly in the demo.
 
 ## Open-source libraries used
 
