@@ -50,6 +50,7 @@ Here's a walkthrough of implemented user stories:
 
 <img src='simpletweet_demo.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 <img src='simpletweet_part2_demo.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='simpletweet_part2_persistence_demo.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
